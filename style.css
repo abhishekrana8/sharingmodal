@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+.wrapper{
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+
+    
+}
+
+
+.top{
+    position: fixed;
+    top: 5%;
+    left: 25%;
+    width: 14em;
+    height: 14em;
+    border-radius: 50%;
+    background: linear-gradient(-25deg,  #d84869, #f46641);
+    animation: topcir 10s infinite;
+    box-shadow: 0 0 50px  #d84869 ;
+}
+
+@keyframes topcir {
+    50%{
+        left: 30%;
+        top: 10%;
+        size: 1.3;
+    }
+    
+}
+
+.bottom{
+    position: absolute;
+    bottom: 3%;
+    right: 22%;
+    width: 16em;
+    height: 16em;
+    border-radius: 50%;
+    background: linear-gradient(-25deg,  #5648d8, #8641f4);
+    animation: botcir 10s infinite;
+    box-shadow: 0 0 50px  #5648d8;
+
+}
+
+@keyframes botcir {
+    50%{
+        right: 25%;
+        bottom: 6%;
+        size: 1.3;
+    }
+    
+}
+
+.main{
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    border: 2px solid #ffffff30;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items: center; 
+    height: 450px;
+    width: 325px;
+    translate: -50% ,-50%;
+    background: #ffffff1a;
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    color: #ffffff;
+    padding: 20px 50px;
+}
+
+
+.mainImage img{
+    height: 150px;
+    width: 150px;
+    border: 2px solid #ffffff30;
+    border-radius: 50%;
+    
+}
+
+.tagline h2{
+    text-align: center;
+    color: #ffffff85;
+}
+.two {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
+    color:white;
+    
+}
+.share-button{
+    display: flex;
+    gap: 7px;
+    padding: 9px 12px; 
+    background: #ffffff00;
+    border: 2px solid #ffffffb9;
+    border-radius: 4px;
+    color: #ffffffb9;
+    cursor: pointer;
+    font-size: medium;
+}
+
+.share-button:hover{
+    background-color: white;
+    color:#000;
+    transition-duration: 0.8s;
+}
+.follow{
+    width: 150px;
+   
+    gap: 7px;
+    padding: 9px 12px;
+    background: #ffffff00;
+    border: 2px solid #ffffffb9;
+    border-radius: 4px;
+    color: #ffffffb9;
+    cursor: pointer;
+    font-size: medium;
+    
+}
+.follow:hover{
+    background-color: white;
+    color:#000;
+    transition-duration: 0.8s;
+}
+
+.modal{
+    gap: 2rem;
+    position: fixed;
+    top: 35%;
+    left: 34%;
+    border-radius: 20px;
+    padding: 20px 25px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ffffffb9;
+    background: #00000088;
+    backdrop-filter: blur(15px);
+    scale: 0;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    gap:5em;
+    font-size: 2rem;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ffffff88;
+}
+.share{
+    font-size: 1.5rem;
+}
+.icons-contain{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+}
+.icon{
+    font-size: 30px;
+    border: 1px solid #ffffff88;
+    padding: 17px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+    gap: 10px;
+    justify-content: center;
+    transition: all 0.5s;
+    margin-bottom: 25px;
+    text-decoration: none;
+}
+
+ .facebook {
+    color: #1771e6;
+    border: 1px solid #1771e6;
+  }
+  .facebook:hover {
+    background-color: #1771e6;
+    color: #fff;
+  }
+  
+  .twitter {
+    color: #1c99e6;
+    border: 1px solid #1c99e6;
+  }
+  .twitter:hover {
+    background-color: #1c99e6;
+    color: #fff;
+  }
+  
+  .instagram {
+    color: #cb2770;
+    border: 1px solid #cb2770;
+  }
+  .instagram:hover {
+    background-color: #cb2770;
+    color: #fff;
+  }
+  
+  .whatsapp {
+    color: #2fe664;
+    border: 1px solid #2fe664;
+  }
+  .whatsapp:hover {
+    background-color: #2fe664;
+    color: #fff;
+  }
+  
+  .telegram {
+    color: #0081c2;
+    border: 1px solid #0081c2;
+  }
+  .telegram:hover {
+    background-color: #0081c2;
+    color: #fff;
+  }
+.active{
+    transition: 0.8s;
+    scale: 1;
+}
+
+.overlay{
+    position: fixed;
+    background-color: #5f5f5f83;
+    top: 0;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+
+}
+
+.overlayactive{
+    opacity: 1;
+    pointer-events: initial;
+    
+}
